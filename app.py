@@ -42,10 +42,7 @@ def predict():
 #    	filename = 'nlp_model.pkl'
 #    	pickle.dump(clf, open(filename, 'wb'))
     
-# 	Alternative Usage of Saved Model
-# 	joblib.dump(clf, 'NB_spam_model.pkl')
-# 	NB_spam_model = open('NB_spam_model.pkl','rb')
-# 	clf = joblib.load(NB_spam_model)
+
 
 	if request.method == 'POST':
 		message = request.form['message']
