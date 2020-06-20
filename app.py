@@ -28,7 +28,7 @@ def predict():
 	cv = CountVectorizer()
 	X = cv.fit_transform(X) # Fit the Data
    
-   pickle.dump(cv, open('tranform.pkl', 'wb'))
+   	pickle.dump(cv, open('tranform.pkl', 'wb'))
    
    
 	from sklearn.model_selection import train_test_split
@@ -39,8 +39,8 @@ def predict():
 	clf = MultinomialNB()
 	clf.fit(X_train,y_train)
 	clf.score(X_test,y_test)
-   filename = 'nlp_model.pkl'
-   pickle.dump(clf, open(filename, 'wb'))
+   	filename = 'nlp_model.pkl'
+   	pickle.dump(clf, open(filename, 'wb'))
     
 	Alternative Usage of Saved Model
 	joblib.dump(clf, 'NB_spam_model.pkl')
